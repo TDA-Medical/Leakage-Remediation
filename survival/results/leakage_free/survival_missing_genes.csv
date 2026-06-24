@@ -1,0 +1,4 @@
+gene_set,missing_genes_json
+H2C_37,"[""FLJ46066"", ""DDX11L1"", ""SFSWAP"", ""SCARNA20"", ""SRSF3""]"
+Euclidean_top37,"[""LOC283392"", ""AQP7P1"", ""LOC572558"", ""AQPEP"", ""ADAMTS9-AS2"", ""LOC100128164"", ""AQP7P3"", ""C18orf34"", ""MIR4508"", ""C9orf71"", ""AOC4""]"
+Random_37,"[""C3orf45"", ""HLA-DRB6""]"

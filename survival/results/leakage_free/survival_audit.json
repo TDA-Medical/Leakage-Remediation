@@ -1,0 +1,80 @@
+{
+  "scope": "fair and out-of-sample survival re-evaluation",
+  "cohort": {
+    "clinical_dataset": "TCGA.BRCA.sampleMap/BRCA_clinicalMatrix",
+    "selected_fields": {
+      "OS": "OS_event_nature2012",
+      "OS.time": "OS_Time_nature2012",
+      "age": "Age_at_Initial_Pathologic_Diagnosis_nature2012",
+      "stage": "Converted_Stage_nature2012",
+      "treatment": "additional_radiation_therapy",
+      "treatment_fields": [
+        "additional_radiation_therapy",
+        "additional_pharmaceutical_therapy",
+        "radiation_therapy"
+      ]
+    },
+    "n_clinical_samples": 1247,
+    "n_expression_samples": 1218,
+    "n_survival_rows": 866,
+    "events": 132
+  },
+  "expr_dataset": "TCGA.BRCA.sampleMap/HiSeqV2",
+  "n_common_samples": 866,
+  "events": 132,
+  "gene_set_sizes": {
+    "H2C_37": 37,
+    "Euclidean_top37": 37,
+    "Random_37": 37
+  },
+  "effective_gene_set_sizes": {
+    "H2C_37": 32,
+    "Euclidean_top37": 26,
+    "Random_37": 35
+  },
+  "missing_genes": {
+    "H2C_37": [
+      "FLJ46066",
+      "DDX11L1",
+      "SFSWAP",
+      "SCARNA20",
+      "SRSF3"
+    ],
+    "Euclidean_top37": [
+      "LOC283392",
+      "AQP7P1",
+      "LOC572558",
+      "AQPEP",
+      "ADAMTS9-AS2",
+      "LOC100128164",
+      "AQP7P3",
+      "C18orf34",
+      "MIR4508",
+      "C9orf71",
+      "AOC4"
+    ],
+    "Random_37": [
+      "C3orf45",
+      "HLA-DRB6"
+    ]
+  },
+  "score_methods": [
+    "pca/in_sample: PCA fit on all evaluation samples; no survival labels used.",
+    "pca/out_of_sample: scaler and PCA fit on training folds, transformed held-out fold only.",
+    "cox_beta/in_sample: Cox coefficients fit and evaluated on all samples; included as circular comparator for all gene sets.",
+    "cox_beta/out_of_sample: Cox coefficients fit on training folds and evaluated on held-out folds."
+  ],
+  "fairness_controls": [
+    "No score method is selected by H2C performance.",
+    "Every gene set is evaluated with the same score methods and fit scopes.",
+    "Random_37 is sampled once with a fixed seed from expression-available non-H2C/non-Euclidean genes.",
+    "Age/stage/treatment covariates are included when present; sex and cancer type are excluded for BRCA-only evaluation."
+  ],
+  "covariate_columns": [
+    "age_years",
+    "stage_missing",
+    "stage_numeric",
+    "treatment_unknown",
+    "treatment_yes"
+  ]
+}

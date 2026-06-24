@@ -1,0 +1,25 @@
+{
+  "scope": "leakage-free classification with fold-internal ComBat",
+  "raw_tumor": "Data-preprocessing/GSE62944_RAW/GSM1536837_06_01_15_TCGA_24.tumor_Rsubread_TPM.txt.gz",
+  "raw_normal": "Data-preprocessing/GSE62944_RAW/GSM1697009_06_01_15_TCGA_24.normal_Rsubread_TPM.txt.gz",
+  "raw_clinical": "Data-preprocessing/GSE62944_06_01_15_TCGA_24_548_Clinical_Variables_9264_Samples.txt.gz",
+  "model_gene_universe": "Data-preprocessing/data_preprocessing/cleaned_tcga_tpm_for_TAE.csv",
+  "n_samples_after_batch_filter": 1207,
+  "class_counts": {
+    "normal": 113,
+    "tumor": 1094
+  },
+  "n_genes": 20861,
+  "tae_model_input_dim": 20876,
+  "tae_input_padding_zeros": 15,
+  "n_folds": 5,
+  "combat_mode": "train-fold-only neuroCombat, batch-only covariate; held-out fold transformed with neuroCombatFromTraining",
+  "why_no_target_covariate": "Target is unavailable for true held-out prediction samples. Using held-out Target as a ComBat covariate would itself leak labels, so fold-internal ComBat is batch-only here.",
+  "leakage_controls": [
+    "Log-transform genes are selected from training fold distribution only.",
+    "ComBat estimates are fit on training fold only.",
+    "Held-out fold is transformed with training ComBat estimates only.",
+    "TDA and Euclidean feature ranks are recomputed after fold-internal ComBat using training samples only.",
+    "Classifiers are fit on training fold features and evaluated once on held-out fold samples."
+  ]
+}

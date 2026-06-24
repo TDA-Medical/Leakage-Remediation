@@ -1,0 +1,22 @@
+{
+  "scope": "leakage-free classification",
+  "input_expression": "Data-preprocessing/data_preprocessing/cleaned_tcga_tpm_for_TAE.csv",
+  "input_latent": "Data-preprocessing/TAE/results/woutSMOTE/latent_32d_cosine.csv",
+  "input_model": "Data-preprocessing/TAE/models/tae_dim32_cosine.pth",
+  "device": "cpu",
+  "n_samples": 1215,
+  "class_counts": {
+    "normal": 113,
+    "tumor": 1102
+  },
+  "n_expression_genes": 20861,
+  "n_folds": 5,
+  "leakage_controls": [
+    "TDA latent Cohen's d is recomputed on each training fold only.",
+    "Decoder Jacobian reference point is recomputed from each training fold tumor mean only.",
+    "Euclidean Welch t-test p-values/ranks are recomputed on each training fold only.",
+    "Classifiers are fit on training fold features and evaluated once on held-out fold samples.",
+    "Latent_32d baseline uses fixed unsupervised latent coordinates only."
+  ],
+  "combat_status": "The local available expression matrix is already ComBat-corrected by the original preprocessing pipeline. Raw tumor/normal/clinical files required to refit ComBat inside each fold were not present locally, so this run removes the core label-dependent feature-selection leakage but cannot refit ComBat."
+}

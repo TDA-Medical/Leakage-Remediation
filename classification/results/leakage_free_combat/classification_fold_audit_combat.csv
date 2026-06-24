@@ -1,0 +1,6 @@
+fold,n_train,n_test,train_tumor,test_tumor,n_log_transform_genes_train_rule,n_zero_variance_genes_excluded_from_combat,zero_variance_genes_json,n_train_batches,n_test_batches
+1,954,253,866,228,16126,0,[],24,24
+2,958,249,869,225,16178,2,"[""DAZ3"", ""SNORD115-5""]",24,24
+3,963,244,873,221,16219,11,"[""FLJ20518"", ""GAGE13"", ""GAGE2D"", ""MAGEA9B"", ""MIR1245B"", ""MIR371A"", ""MIR3914-1"", ""MIR489"", ""MIR520H"", ""MIR764"", ""TTTY6""]",24,23
+4,972,235,880,214,16188,1,"[""MIR371B""]",24,22
+5,981,226,888,206,16182,3,"[""MIR2054"", ""MIR3661"", ""MIR451A""]",24,21
