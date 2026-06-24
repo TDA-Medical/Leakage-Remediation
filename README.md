@@ -87,6 +87,28 @@ Leakage-Remediation/
 
 Raw TCGA preprocessing files and large model/data artifacts are not committed to this repository.
 
+## Required External Artifacts
+
+Most processed project artifacts are tracked in the existing project repositories:
+
+| Artifact | Expected source |
+| --- | --- |
+| TAE model checkpoint | `Data-preprocessing/TAE/models/tae_dim32_cosine.pth` |
+| 32-dimensional latent matrix | `Data-preprocessing/TAE/results/woutSMOTE/latent_32d_cosine.csv` |
+| Cleaned TCGA TPM matrix | `Data-preprocessing/data_preprocessing/cleaned_tcga_tpm_for_TAE.csv` |
+| BRCA gene statistics | `Data-preprocessing/data_analysis/output_brca_patients/00_BRCA_All_23368_Genes_Statistics.csv` |
+| TDA gene importance ranking | `FindVar/phase3_gene_traceback/results/gene_importance_full.csv` |
+| Original classification summary | `FindVar/phase4_biological_interpretation/results/classification_results.csv` |
+| Survival helper module | `FindVar-Survival-Analysis/phase7_survival_analysis/survival_analysis.py` |
+
+The following raw preprocessing inputs are not tracked in the existing GitHub repositories and must be supplied separately to fully rerun the strict fold-internal ComBat classification script:
+
+```text
+Data-preprocessing/GSE62944_06_01_15_TCGA_24_548_Clinical_Variables_9264_Samples.txt.gz
+Data-preprocessing/GSE62944_RAW/GSM1536837_06_01_15_TCGA_24.tumor_Rsubread_TPM.txt.gz
+Data-preprocessing/GSE62944_RAW/GSM1697009_06_01_15_TCGA_24.normal_Rsubread_TPM.txt.gz
+```
+
 ## Data Availability
 
 The survival re-evaluation uses TCGA-BRCA survival and expression data from UCSC Xena. The strict classification ComBat run requires the original TCGA preprocessing input files used by the H2C/TDA project; those raw files are intentionally excluded from GitHub.
