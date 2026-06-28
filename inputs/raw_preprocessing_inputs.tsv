@@ -1,0 +1,4 @@
+path	url	size_bytes	sha256
+Data-preprocessing/GSE62944_06_01_15_TCGA_24_548_Clinical_Variables_9264_Samples.txt.gz	https://ftp.ncbi.nlm.nih.gov/geo/series/GSE62nnn/GSE62944/suppl/GSE62944_06_01_15_TCGA_24_548_Clinical_Variables_9264_Samples.txt.gz	1226302	b5e8cd83cac3ccb3896e74fa81b91a8b865002aea34a329f99d23c25a394e7a3
+Data-preprocessing/GSE62944_RAW/GSM1536837_06_01_15_TCGA_24.tumor_Rsubread_TPM.txt.gz	https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM1536nnn/GSM1536837/suppl/GSM1536837_06_01_15_TCGA_24.tumor_Rsubread_TPM.txt.gz	1493683326	e47302c0d63bf7210f3208b1efc6d9d5a530d034f162f011b5e36b8dfa81021c
+Data-preprocessing/GSE62944_RAW/GSM1697009_06_01_15_TCGA_24.normal_Rsubread_TPM.txt.gz	https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM1697nnn/GSM1697009/suppl/GSM1697009_06_01_15_TCGA_24.normal_Rsubread_TPM.txt.gz	120757746	074a02af9995f6ef1af2f5789a2f6bf5c82a5039901c35bea4791d05812d084c
