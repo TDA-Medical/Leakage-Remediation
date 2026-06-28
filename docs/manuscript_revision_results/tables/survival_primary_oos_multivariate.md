@@ -1,0 +1,6 @@
+| Gene set | Score | HR/SD | Cox p | C-index |
+| --- | --- | --- | --- | --- |
+| H2C (37) | Cox-beta (OOS) | 1.226 | 0.003 | 0.767 |
+| H2C (37) | PCA (OOS) | 0.973 | 0.684 | 0.727 |
+| Euclidean Top37 | Cox-beta (OOS) | 1.127 | 0.090 | 0.728 |
+| Random 37 | Cox-beta (OOS) | 1.049 | 0.549 | 0.733 |

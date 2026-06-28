@@ -1,0 +1,9 @@
+{
+  "source_root_env": "LEAKAGE_REMEDIATION_ROOT",
+  "source_root_note": "Set LEAKAGE_REMEDIATION_ROOT to the local Leakage-Remediation repository root.",
+  "classification_summary": "classification/results/leakage_free_combat/classification_summary_leakage_free_combat.csv",
+  "classification_fold_metrics": "classification/results/leakage_free_combat/classification_fold_metrics_combat.csv",
+  "survival_results": "survival/results/leakage_free/survival_priority1_results.csv",
+  "survival_scores": "survival/results/leakage_free/survival_score_values.csv",
+  "survival_cohort": "survival/data/brca_survival_cohort.tsv"
+}
