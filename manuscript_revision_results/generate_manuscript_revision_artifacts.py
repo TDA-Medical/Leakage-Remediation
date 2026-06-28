@@ -398,7 +398,7 @@ def plot_survival(results: pd.DataFrame, scores: pd.DataFrame, cohort: pd.DataFr
         score_col = f"{gene_set}__{score_method}__out_of_sample"
         plot_km_panel(ax, merged, score_col, title, oos_multi.loc[(gene_set, score_method)])
 
-    fig.suptitle("Out-of-sample Kaplan-Meier curves after survival leakage remediation", fontsize=11)
+    fig.suptitle("Out-of-sample Kaplan-Meier survival curves (TCGA-BRCA)", fontsize=11)
     fig.savefig(figures_dir / "fig7_km_oos_survival.png", dpi=300)
     fig.savefig(figures_dir / "fig7_km_oos_survival.pdf")
     plt.close(fig)
