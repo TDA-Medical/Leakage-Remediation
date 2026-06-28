@@ -28,6 +28,16 @@ inputs/
 
 scripts/
   download_raw_preprocessing_inputs.sh
+
+manuscript_revision_results/
+  README.md
+  generate_manuscript_revision_artifacts.py
+  figures/
+    fig5_classification_performance.{png,pdf}
+    fig7_km_oos_survival.{png,pdf}
+  tables/
+    table3_classification_fold_internal_cv.*
+    survival_*.*
 ```
 
 ## Classification Re-Evaluation
@@ -79,6 +89,12 @@ Main result:
 | Random_37 | cox_beta | 1.048946 | 0.548799 | 0.001177 | 0.733135 |
 
 Interpretation: H2C retains adjusted prognostic signal under supervised out-of-sample Cox-beta scoring. PCA-based survival signal is not supported.
+
+## Manuscript Revision Artifacts
+
+Camera-ready table and figure artifacts are provided in: manuscript_revision_results/.
+
+This folder contains manuscript-ready replacements for Fig. 5 and Fig. 7, table-ready CSV/Markdown summaries, and a small generation script. It contains only derived artifacts; raw expression matrices, patient-level score tables, model checkpoints, and controlled-access data are not included.
 
 ## Reproduction Notes
 

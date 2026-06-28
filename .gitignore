@@ -3,9 +3,7 @@ __pycache__/
 .venv/
 .env
 *.log
-docs/*
-!docs/manuscript_revision_results/
-!docs/manuscript_revision_results/**
+docs/
 Data-preprocessing/
 GSE62944_RAW/
 GSE62944_06_01_15_TCGA_24_548_Clinical_Variables_9264_Samples.txt.gz
