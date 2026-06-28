@@ -22,12 +22,6 @@ survival/
     brca_survival_cohort.tsv
   results/
     leakage_free/
-
-inputs/
-  raw_preprocessing_inputs.tsv
-
-scripts/
-  download_raw_preprocessing_inputs.sh
 ```
 
 ## Classification Re-Evaluation
@@ -113,20 +107,6 @@ The following raw preprocessing inputs are not tracked in the existing GitHub re
 Data-preprocessing/GSE62944_06_01_15_TCGA_24_548_Clinical_Variables_9264_Samples.txt.gz
 Data-preprocessing/GSE62944_RAW/GSM1536837_06_01_15_TCGA_24.tumor_Rsubread_TPM.txt.gz
 Data-preprocessing/GSE62944_RAW/GSM1697009_06_01_15_TCGA_24.normal_Rsubread_TPM.txt.gz
-```
-
-These are public NCBI GEO/FTP supplementary input files referenced by the original preprocessing workflow. They were not developed in this project.
-
-The exact URLs, file sizes, and SHA-256 checksums are listed in:
-
-```text
-inputs/raw_preprocessing_inputs.tsv
-```
-
-To download and verify them into a workspace containing `Data-preprocessing/`, run:
-
-```bash
-bash scripts/download_raw_preprocessing_inputs.sh /path/to/workspace
 ```
 
 ## Data Availability
